@@ -1,0 +1,13 @@
+The included os.h is only for MSVC.
+
+--- origsrc/libshout-2.3.1/include/shout/shout.h.in	2012-02-01 15:02:18.000000000 -0600
++++ src/libshout-2.3.1/include/shout/shout.h.in	2013-11-20 04:22:49.866581200 -0600
+@@ -22,7 +22,7 @@
+ #define __LIBSHOUT_SHOUT_H__
+ 
+ #include <sys/types.h>
+-#ifdef WIN32
++#ifdef _MSC_VER
+ #include <os.h>
+ #endif
+ 
