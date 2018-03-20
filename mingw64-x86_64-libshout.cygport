@@ -2,7 +2,7 @@ CROSS_HOST="x86_64-w64-mingw32"
 inherit cross
 
 NAME="mingw64-x86_64-libshout"
-VERSION=2.3.1
+VERSION=2.4.1
 RELEASE=1
 CATEGORY="Devel"
 SUMMARY="Icecast streaming media client library for Win64 toolchain"
@@ -14,9 +14,8 @@ SRC_URI="http://downloads.us.xiph.org/releases/libshout/libshout-${VERSION}.tar.
 SRC_DIR="libshout-${VERSION}"
 PATCH_URI="
 	2.2.2-no-undefined.patch
-	2.3.1-mingw.patch
+	2.4.1-vpath.patch
+	2.4.1-mingw.patch
 "
 
-MAKEOPTS+=" doc_DATA= "
-
-KEEP_LA_FILES="none"
+MAKEOPTS+=" ckport_DATA= doc_DATA= "

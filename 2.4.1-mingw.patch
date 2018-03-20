@@ -1,0 +1,14 @@
+--- origsrc/libshout-2.4.1/src/proto_roaraudio.c	2015-11-20 10:22:27.000000000 -0600
++++ src/libshout-2.4.1/src/proto_roaraudio.c	2018-03-20 02:38:19.403196000 -0500
+@@ -28,7 +28,11 @@
+ #endif
+ 
+ /* for htonl(). */
++#ifdef _WIN32
++#include <winsock2.h>
++#else
+ #include <arpa/inet.h>
++#endif
+ 
+ #include <stdio.h>
+ #include <stdlib.h>
